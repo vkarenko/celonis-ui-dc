@@ -1,0 +1,26 @@
+@import '../../../scss/variables';
+
+:host {
+  display: block;
+}
+
+.logo {
+  float: left;
+  padding: 0 $base-indent;
+  height: 100%;
+
+  &::after {
+    content: '';
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+  }
+
+  &-icon {
+    display: inline-block;
+    height: 2.7rem;
+    width: 11.5rem;
+    vertical-align: middle;
+    margin-top: -.2rem;
+  }
+}

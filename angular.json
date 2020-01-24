@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/scss/styles.scss"
             ],
             "scripts": []
           },
@@ -67,7 +67,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "celonis-ui-dc:build"
+            "port": 4200,
+            "browserTarget": "celonis-ui-dc:build",
+            "host": "celonis-ui-dc.local"
           },
           "configurations": {
             "production": {

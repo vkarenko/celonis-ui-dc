@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.nav {
+  &-item {
+    display: block;
+  }
+}
