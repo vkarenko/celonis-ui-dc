@@ -1,0 +1,101 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #16aaff;
+  color: #fff;
+  border-radius: .4rem;
+  padding: .6rem 1.2rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 2rem;
+  -webkit-font-smoothing: antialiased;
+  transition: all linear .1s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  user-select: none;
+
+
+  &::before,
+  &::after {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    border-radius: 100%;
+    transform-origin: 50% 50%;
+  }
+
+
+  &::before {
+    background-color: currentColor;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+
+
+  &::after {
+    top: 50%;
+    left: 50%;
+    width: .5rem;
+    height: .5rem;
+    background: rgba(#fff, .5);
+    transform: scale(1) translate(-50%);
+  }
+
+
+  &:hover {
+    text-decoration: none;
+
+    &::before {
+      opacity: .08;
+    }
+  }
+
+
+  &:focus {
+    &::before {
+      opacity: .1;
+    }
+
+
+    &:not(:active) {
+
+      /* stylelint-disable */
+      &::after {
+        animation: rippleBtn 1s ease-out;
+      }
+
+      /* stylelint-enable */
+    }
+  }
+
+  &-ico {
+    margin: 0 .4rem 0 0;
+  }
+}
+
+@keyframes rippleBtn {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(50);
+  }
+}

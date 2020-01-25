@@ -1,0 +1,101 @@
+// breakpoints
+// -----------------------------------------------------------------------------
+$breakpoint-xs: 480px;
+$breakpoint-s: 576px;
+$breakpoint-m: 768px;
+$breakpoint-l: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1600px;
+
+
+@mixin breakpoint-xl {
+  @media only screen and (max-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+
+@mixin breakpoint-l {
+  @media only screen and (max-width: $breakpoint-l - 1px) {
+    @content;
+  }
+}
+
+
+@mixin breakpoint-m {
+  @media only screen and (max-width: $breakpoint-m - 1px) {
+    @content;
+  }
+}
+
+
+@mixin breakpoint-s {
+  @media only screen and (max-width: $breakpoint-s - 1px) {
+    @content;
+  }
+}
+
+
+@mixin breakpoint-xs {
+  @media only screen and (max-width: $breakpoint-xs - 1px) {
+    @content;
+  }
+}
+
+
+@mixin min-width-breakpoint-xxl {
+  @media only screen and (min-width: $breakpoint-xxl) {
+    @content;
+  }
+}
+
+
+@mixin min-width-breakpoint-xl {
+  @media only screen and (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+
+@mixin min-width-breakpoint-l {
+  @media only screen and (min-width: $breakpoint-l) {
+    @content;
+  }
+}
+
+
+@mixin min-width-breakpoint-m {
+  @media only screen and (min-width: $breakpoint-m) {
+    @content;
+  }
+}
+
+
+@mixin min-width-breakpoint-s {
+  @media only screen and (min-width: $breakpoint-s) {
+    @content;
+  }
+}
+
+
+@mixin min-width-breakpoint-xs {
+  @media only screen and (min-width: $breakpoint-xs) {
+    @content;
+  }
+}
+
+
+// Example
+/*
+.sidebar {
+  width: 60%;
+  float: left;
+  margin: 0 2% 0 0;
+
+  @include breakpoint-s {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+}
+*/

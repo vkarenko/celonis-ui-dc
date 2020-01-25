@@ -1,10 +1,28 @@
+@import '../../../../scss/variables';
+
 :host {
   display: block;
   height: 100%;
 }
 
 .nav {
+  padding: $base-indent;
+
   &-item {
     display: block;
+    line-height: 3.6rem;
+    height: 3.6rem;
+    padding: 0 2.4rem;
+    position: relative;
+    border-radius: .4rem;
+    color: #343a40;
+    white-space: nowrap;
+    transition: all .2s;
+    margin: .2rem 0;
+
+    &:hover {
+      background: #e0f3ff;
+      text-decoration: none;
+    }
   }
 }

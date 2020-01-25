@@ -1,0 +1,16 @@
+@mixin generate-columns ($columns, $size: '') {
+  @for $i from 1 through $columns {
+    @if ($size=='') {
+      .column-#{$i} {
+        width: 100% / $columns * $i;
+      }
+    }
+
+
+    @else {
+      .column-#{$i}-#{$size} {
+        width: 100% / $columns * $i;
+      }
+    }
+  }
+}
