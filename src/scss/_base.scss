@@ -48,7 +48,15 @@ body {
 }
 
 .container {
-  padding: 0 2.4rem;
+  padding: 0 .6rem;
+
+  @include min-width-s {
+    padding: 0 1.2rem;
+  }
+
+  @include min-width-m {
+    padding: 0 2.4rem;
+  }
 }
 
 .title {

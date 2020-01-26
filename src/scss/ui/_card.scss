@@ -1,8 +1,16 @@
 .card {
   border-radius: .4rem;
   background: #fff;
-  padding: 2.4rem;
+  padding: .6rem;
   margin: 0 0 2.4rem;
 
   @include shadow-deapth(1);
+
+  @include min-width-xs {
+    padding: 1.2rem;
+  }
+
+  @include min-width-m {
+    padding: 2.4rem;
+  }
 }
