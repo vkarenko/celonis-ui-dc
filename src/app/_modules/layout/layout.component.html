@@ -1,5 +1,5 @@
 <div class="layout" [ngClass]="{'layout_scrolled': isScrolled}">
-  <header class="layout-header" [ngClass]="{'layout-header_sticky': isScrolled}">
+  <header class="layout-header" [ngStyle]="{'width': layoutWidth + 'px'}" [ngClass]="{'layout-header_sticky': isScrolled}">
     <div class="row row_noMarginBottom">
       <div class="column column-12 column-8-s">
         <div class="layout-title">
