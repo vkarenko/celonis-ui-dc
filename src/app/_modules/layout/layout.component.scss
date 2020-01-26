@@ -1,4 +1,4 @@
-@import '../../../scss/mixins/shadows';
+@import '../../../scss/mixins';
 
 .layout {
   width: 100%;
@@ -17,16 +17,15 @@
     &_sticky {
       padding: 1.2rem 2.4rem;
       position: fixed;
-      top: 6rem;
-    }
+      top: 5.2rem;
 
-    &-wrapp {
-      display: table-row;
+      @include min-width-l {
+        top: 6rem;
+      }
     }
   }
 
   &-actions {
-    display: table-cell;
     text-align: right;
     padding: 1.4rem 0 0;
 
@@ -39,7 +38,6 @@
 
   &-title {
     color: #fff;
-    display: table-cell;
 
     &-icon {
       display: inline-block;

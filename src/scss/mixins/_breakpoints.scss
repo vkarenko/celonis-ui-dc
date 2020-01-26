@@ -1,0 +1,49 @@
+// breakpoints
+// -----------------------------------------------------------------------------
+$breakpoint-xs: 480px;
+$breakpoint-s: 576px;
+$breakpoint-m: 768px;
+$breakpoint-l: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1600px;
+
+@mixin min-width-xxl {
+  @media only screen and (min-width: $breakpoint-xxl) {
+    @content;
+  }
+}
+
+
+@mixin min-width-xl {
+  @media only screen and (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+
+@mixin min-width-l {
+  @media only screen and (min-width: $breakpoint-l) {
+    @content;
+  }
+}
+
+
+@mixin min-width-m {
+  @media only screen and (min-width: $breakpoint-m) {
+    @content;
+  }
+}
+
+
+@mixin min-width-s {
+  @media only screen and (min-width: $breakpoint-s) {
+    @content;
+  }
+}
+
+
+@mixin min-width-xs {
+  @media only screen and (min-width: $breakpoint-xs) {
+    @content;
+  }
+}

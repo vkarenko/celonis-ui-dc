@@ -1,0 +1,102 @@
+@import '../../../../scss/mixins';
+
+// Edit wikipedia styles
+::ng-deep .hatnote,
+::ng-deep .mw-empty-elt,
+::ng-deep .shortdescription,
+::ng-deep .vertical-navbox {
+  display: none;
+}
+
+::ng-deep .infobox {
+  float: right;
+  width: 36rem;
+  margin: 0 0 2.4rem 2.4rem;
+  border-radius: .4rem;
+  background: rgba(0, 0, 0, .05);
+  padding: 2.4rem;
+  font-size: 1.2rem;
+
+  @include shadow-deapth(3);
+
+  tbody tr:first-child {
+    text-align: center;
+  }
+
+  .fn {
+    display: none;
+  }
+}
+
+::ng-deep .mw-references-wrap {
+  padding: 2.4rem 0 0 2.4rem;
+
+  li {
+    margin: 0 0 .6rem;
+  }
+}
+
+::ng-deep .mw-parser-output {
+  overflow: hidden;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .tright {
+    float: right;
+    clear: right;
+  }
+
+  .thumbinner {
+    margin: 0 0 2.4rem 2.4rem;
+    border-radius: .4rem;
+    background: rgba(0, 0, 0, .05);
+    padding: 2.4rem;
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 32rem;
+
+    @include shadow-deapth(3);
+  }
+
+  .tleft {
+    float: left;
+    clear: left;
+
+    .thumbinner {
+      margin: 0 2.4rem 2.4rem 0;
+    }
+  }
+
+  .toc {
+    display: none;
+  }
+
+  ul.gallery {
+    margin: 2px;
+    padding: 2px;
+    display: block;
+    text-align: center;
+  }
+
+  .gallerycaption {
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    word-wrap: break-word;
+  }
+
+  .gallerybox {
+    vertical-align: top;
+    display: inline-block;
+    width: 18rem;
+    margin: 0 .6rem .6rem;
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+}

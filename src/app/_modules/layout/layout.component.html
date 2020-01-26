@@ -1,24 +1,28 @@
 <div class="layout" [ngClass]="{'layout_scrolled': isScrolled}">
   <header class="layout-header" [ngClass]="{'layout-header_sticky': isScrolled}">
-    <div class="layout-header-wrap">
-      <div class="layout-title">
-        <div class="layout-title-icon">
-          <i class="far fa-newspaper icon icon_gradient"></i>
-        </div>
+    <div class="row row_noMarginBottom">
+      <div class="column column-12 column-8-s">
+        <div class="layout-title">
+          <div class="layout-title-icon">
+            <i class="far fa-newspaper icon icon_gradient"></i>
+          </div>
 
-        <h1 class="layout-title-heading">
-          Basic Article
-          <span class="layout-title-subheading">This is an example article.</span>
-        </h1>
+          <h1 class="layout-title-heading">
+            Basic Article
+            <span class="layout-title-subheading">This is an example article.</span>
+          </h1>
+        </div>
       </div>
 
-      <div class="layout-actions">
-        <button class="btn"><i class="fas fa-star"></i></button>
+      <div class="column column-12 column-4-s">
+        <div class="layout-actions">
+          <button class="btn btn_dark"><i class="fas fa-star"></i></button>
 
-        <button class="btn">
-          <span class="btn-ico"><i class="fas fa-copy"></i></span>
-          <span class="btn-text">Copy text</span>
-        </button>
+          <button class="btn">
+            <span class="btn-ico"><i class="fas fa-copy"></i></span>
+            <span class="btn-text">Copy text</span>
+          </button>
+        </div>
       </div>
     </div>
   </header>

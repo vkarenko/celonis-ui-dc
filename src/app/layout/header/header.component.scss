@@ -1,4 +1,5 @@
 @import '../../../scss/variables';
+@import '../../../scss/mixins';
 
 :host {
   display: block;
@@ -6,8 +7,12 @@
 
 .logo {
   float: left;
-  padding: 0 $base-indent;
+  padding: 0 $base-indent-s;
   height: 100%;
+
+  @include min-width-m {
+    padding: 0 $base-indent;
+  }
 
   &::after {
     content: '';

@@ -1,23 +1,18 @@
 // Responsive Grid System Styles
 // -----------------------------------------------------------------------------
-
-
-// grid variables
-// -----------------------------------------------------------------------------
 $grid-columns: 12;
 
-
 .row {
-  margin: 0 -.6rem;
+  margin: 0 -.6rem 1.2rem;
   zoom: 1;
 
-  @include min-width-breakpoint-l {
-    &_Wide {
+  @include min-width-l {
+    &_wide {
       margin: 0 -1.2rem;
     }
   }
 
-  &_NoMarginBottom {
+  &_noMarginBottom {
     margin-bottom: 0;
   }
 
@@ -36,13 +31,12 @@ $grid-columns: 12;
   float: left;
   min-height: .1rem;
   padding: 0 .6rem;
-  margin: 0 0 1.2rem;
 
-  &_NoMargin {
-    margin: 0;
+  &_mb12 {
+    margin: 0 0 1.2rem;
   }
 
-  @include min-width-breakpoint-l {
+  @include min-width-l {
     .row_wide & {
       padding: 0 1.2rem;
       margin: 0 0 2.4rem;
@@ -52,26 +46,26 @@ $grid-columns: 12;
 
 @include generate-columns($grid-columns);
 
-@include min-width-breakpoint-xs {
+@include min-width-xs {
   @include generate-columns($grid-columns, 'xs');
 }
 
-@include min-width-breakpoint-s {
+@include min-width-s {
   @include generate-columns($grid-columns, 's');
 }
 
-@include min-width-breakpoint-m {
+@include min-width-m {
   @include generate-columns($grid-columns, 'm');
 }
 
-@include min-width-breakpoint-l {
+@include min-width-l {
   @include generate-columns($grid-columns, 'l');
 }
 
-@include min-width-breakpoint-xl {
+@include min-width-xl {
   @include generate-columns($grid-columns, 'xl');
 }
 
-@include min-width-breakpoint-xxl {
+@include min-width-xxl {
   @include generate-columns($grid-columns, 'xxl');
 }

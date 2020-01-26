@@ -1,0 +1,68 @@
+.hambMenu {
+  display: block;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  padding: .6rem $base-indent-s;
+
+  @include min-width-m {
+    padding: .6rem $base-indent;
+  }
+
+  @include min-width-l {
+    display: none;
+  }
+
+  &-btn {
+    display: block;
+    padding: 1.8rem .6rem;
+    width: 3.9rem;
+    height: 4rem;
+    color: rgba(#6c757d, .9);
+    position: relative;
+    z-index: 3;
+
+    &:hover {
+      background: #e0f3ff;
+    }
+  }
+
+  &-line {
+    display: block;
+    height: .2rem;
+    background: currentColor;
+    transition: transform .7s ease, backgraund .2s linear;
+    border-radius: .2rem;
+
+    .hambMenu_opened & {
+      height: 0;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      background: currentColor;
+      height: .2rem;
+      transition: transform .7s ease, backgraund .2s linear;
+      border-radius: .2rem;
+    }
+
+    &::before {
+      transform: translate(0, -.7rem);
+
+      .hambMenu_opened & {
+        transform: rotate(45deg) translate(0, 0);
+      }
+    }
+
+    &::after {
+      transform: translate(0, 5px);
+
+      .hambMenu_opened & {
+        transform: rotate(-45deg) translate(1px, -1px);
+      }
+    }
+  }
+}

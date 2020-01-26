@@ -1,0 +1,25 @@
+.sidebar {
+  position: fixed;
+  z-index: 1;
+  background: #fff;
+  height: 100vh;
+  width: 28rem;
+  overflow: hidden;
+  margin-top: -5.2rem;
+  padding-top: 5.2rem;
+  transition: all .2s;
+  right: -28rem;
+
+  &_active {
+    right: 0;
+  }
+
+  @include shadow-deapth(4);
+
+  @include min-width-l {
+    display: block;
+    left: 0;
+    margin-top: -6rem;
+    padding-top: 6rem;
+  }
+}
