@@ -1,0 +1,8 @@
+.card {
+  border-radius: .4rem;
+  background: #fff;
+  padding: 2.4rem;
+  margin: 0 0 2.4rem;
+
+  @include shadow-deapth(1);
+}

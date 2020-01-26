@@ -1,5 +1,23 @@
 <nav class="nav">
-  <a class="nav-item">Layout example</a>
-  <a class="nav-item">UI Component</a>
-  <a class="nav-item">Animations</a>
+  <div class="nav-group">
+    <a class="nav-item" routerLinkActive="nav-item_active" [routerLink]="[ '/layout-example' ]">
+      <i class="far fa-newspaper nav-icon"></i>
+      Layout example
+    </a>
+
+    <nav class="nav nav_sub">
+      <a class="nav-item nav-item_sub" routerLinkActive="nav-item_sub_active" [routerLink]="[ '/layout-example/content' ]">Basic Article</a>
+      <a class="nav-item nav-item_sub" routerLinkActive="nav-item_sub_active" [routerLink]="[ '/layout-example/content-small' ]">Small Article</a>
+    </nav>
+  </div>
+
+  <a class="nav-item" routerLinkActive="nav-item_active" [routerLink]="[ '/ui-component' ]">
+    <i class="far fa-address-card nav-icon"></i>
+    UI Component
+  </a>
+
+  <a class="nav-item" routerLinkActive="nav-item_active" [routerLink]="[ '/animation' ]">
+    <i class="fas fa-tachometer-alt nav-icon"></i>
+    Animations
+  </a>
 </nav>

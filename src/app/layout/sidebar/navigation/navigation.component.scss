@@ -8,21 +8,69 @@
 .nav {
   padding: $base-indent;
 
+  &_sub {
+    padding: 0 0 0 4rem;
+  }
+
   &-item {
     display: block;
     line-height: 3.6rem;
     height: 3.6rem;
-    padding: 0 2.4rem;
+    padding: 0 1.2rem;
     position: relative;
     border-radius: .4rem;
     color: #343a40;
     white-space: nowrap;
     transition: all .2s;
     margin: .2rem 0;
+    text-decoration: none;
 
     &:hover {
       background: #e0f3ff;
-      text-decoration: none;
+    }
+
+    &_active {
+      font-weight: 500;
+      color: #ff7000;
+    }
+
+    &_sub {
+      font-size: 1.3rem;
+      height: 3.2rem;
+      line-height: 3.2rem;
+
+      &_active {
+        background: #e0f3ff;
+      }
+    }
+  }
+
+  &-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2.8rem;
+    height: 2.8rem;
+    text-align: left;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    opacity: .24;
+    transition: all .2s;
+
+    .nav-item:hover & {
+      opacity: .4;
+    }
+
+    .nav-item_active & {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-image: linear-gradient(120deg, #ff0000 0%, #ff7000 100%) !important;
+      -webkit-font-smoothing: antialiased;
+      opacity: .8;
+    }
+
+    .nav-item_active:hover & {
+      opacity: 1;
     }
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WikiArticlesService, ArticleResponce } from 'src/app/_services/wiki-articles.service';
 
 @Component({
   selector: 'app-content',

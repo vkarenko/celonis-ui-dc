@@ -5,10 +5,11 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { ContentComponent } from './content/content.component';
 import { ContentSmallComponent } from './content-small/content-small.component';
 import { LayoutComponent } from './layout.component';
+import { ContentSectionComponent } from './content-section/content-section.component';
 
 
 @NgModule({
-  declarations: [ContentComponent, ContentSmallComponent, LayoutComponent],
+  declarations: [ContentComponent, ContentSmallComponent, LayoutComponent, ContentSectionComponent],
   imports: [
     CommonModule,
     LayoutRoutingModule

@@ -1,0 +1,77 @@
+// Responsive Grid System Styles
+// -----------------------------------------------------------------------------
+
+
+// grid variables
+// -----------------------------------------------------------------------------
+$grid-columns: 12;
+
+
+.row {
+  margin: 0 -.6rem;
+  zoom: 1;
+
+  @include min-width-breakpoint-l {
+    &_Wide {
+      margin: 0 -1.2rem;
+    }
+  }
+
+  &_NoMarginBottom {
+    margin-bottom: 0;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.column {
+  float: left;
+  min-height: .1rem;
+  padding: 0 .6rem;
+  margin: 0 0 1.2rem;
+
+  &_NoMargin {
+    margin: 0;
+  }
+
+  @include min-width-breakpoint-l {
+    .row_wide & {
+      padding: 0 1.2rem;
+      margin: 0 0 2.4rem;
+    }
+  }
+}
+
+@include generate-columns($grid-columns);
+
+@include min-width-breakpoint-xs {
+  @include generate-columns($grid-columns, 'xs');
+}
+
+@include min-width-breakpoint-s {
+  @include generate-columns($grid-columns, 's');
+}
+
+@include min-width-breakpoint-m {
+  @include generate-columns($grid-columns, 'm');
+}
+
+@include min-width-breakpoint-l {
+  @include generate-columns($grid-columns, 'l');
+}
+
+@include min-width-breakpoint-xl {
+  @include generate-columns($grid-columns, 'xl');
+}
+
+@include min-width-breakpoint-xxl {
+  @include generate-columns($grid-columns, 'xxl');
+}

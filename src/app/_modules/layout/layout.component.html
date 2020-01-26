@@ -1,23 +1,25 @@
-<div class="layout">
-  <header class="layout-header clearFix">
-    <div class="layout-actions">
-      <button class="btn"><i class="fas fa-star"></i></button>
+<div class="layout" [ngClass]="{'layout_scrolled': isScrolled}">
+  <header class="layout-header" [ngClass]="{'layout-header_sticky': isScrolled}">
+    <div class="layout-header-wrap">
+      <div class="layout-title">
+        <div class="layout-title-icon">
+          <i class="far fa-newspaper icon icon_gradient"></i>
+        </div>
 
-      <button class="btn">
-        <span class="btn-ico"><i class="fas fa-copy"></i></span>
-        <span class="btn-text">Copy text</span>
-      </button>
-    </div>
-
-    <div class="layout-title">
-      <div class="layout-title-icon">
-        <i class="far fa-newspaper icon icon_gradient"></i>
+        <h1 class="layout-title-heading">
+          Basic Article
+          <span class="layout-title-subheading">This is an example article.</span>
+        </h1>
       </div>
 
-      <h1 class="layout-title-heading">
-        Basic Article
-        <span class="layout-title-subheading">This is an example article.</span>
-      </h1>
+      <div class="layout-actions">
+        <button class="btn"><i class="fas fa-star"></i></button>
+
+        <button class="btn">
+          <span class="btn-ico"><i class="fas fa-copy"></i></span>
+          <span class="btn-text">Copy text</span>
+        </button>
+      </div>
     </div>
   </header>
 
