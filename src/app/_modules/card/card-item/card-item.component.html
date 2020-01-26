@@ -1,3 +1,17 @@
-<div class="card">
+<div class="card" [ngClass]="{'card_onecolumn': twoColumnView}">
+  <div class="card-img">
+    <i class="icon icon_gradient icon_gradient_dark fas fa-user-astronaut"></i>
+  </div>
 
+  <div class="card-content">
+    <h2 class="card-heading">Person Name</h2>
+
+    <ul class="card-info">
+      <li class="card-info-item">Person info item</li>
+      <li class="card-info-item">Person info item</li>
+      <li class="card-info-item">Person info item</li>
+    </ul>
+  </div>
+
+  <a class="card-action" (click)="twoColumnView = !twoColumnView" href="javascript:void(0);"></a>
 </div>

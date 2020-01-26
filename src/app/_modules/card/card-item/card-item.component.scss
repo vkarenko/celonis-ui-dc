@@ -1,0 +1,80 @@
+@import '../../../../scss/mixins/';
+
+.card {
+  overflow: hidden;
+  background: rgba(255, 255, 255, .45);
+  position: relative;
+
+  &_onecolumn {
+    padding: 0;
+  }
+
+  &-img {
+    display: inline-block;
+    width: 12rem;
+    height: 12rem;
+    border-radius: .4rem;
+    text-align: center;
+    padding: 1.2rem .6rem;
+    background: #fff;
+    font-size: 6.4rem;
+    line-height: 9.6rem;
+    float: left;
+
+    @include shadow-deapth(1);
+
+    .card_onecolumn & {
+      display: none;
+    }
+  }
+
+  &-content {
+    margin: 0 0 0 14.2rem;
+
+    .card_onecolumn & {
+      margin: 0;
+    }
+  }
+
+  &-heading {
+    .card_onecolumn & {
+      padding: 4.8rem 2.4rem 2.4rem;
+      background: rgba(4, 9, 20, .04);
+      border-bottom: .1rem solid rgba(4, 9, 20, .1);
+    }
+  }
+
+  &-info {
+    list-style: none;
+
+    .card_onecolumn & {
+      padding: 2.4rem;
+    }
+  }
+
+  &-action {
+    position: absolute;
+    right: 1.2rem;
+    top: 1.2rem;
+    color: rgba(#6c757d, .9);
+    line-height: 1;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    text-align: center;
+
+    &:hover {
+      background: #e0f3ff;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: .2rem;
+      height: .2rem;
+      border-radius: 100%;
+      background-color: black;
+      box-shadow: 0 .4rem 0 black, 0 .8rem 0 black;
+    }
+  }
+}
